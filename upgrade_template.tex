@@ -1,0 +1,127 @@
+\documentclass[a4paper,11pt]{report}
+\setcounter{errorcontextlines}{999}
+
+%%%pre-amble%%%%%%%%
+\usepackage{rotating}
+\usepackage{adjustbox}
+\usepackage{graphicx}
+\usepackage{hyperref} %this makes everything hyper-refed
+\usepackage{fancyhdr}
+\usepackage{subfigure}
+\usepackage{textgreek}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{verbatim}
+\usepackage{longtable}
+\setlength{\LTcapwidth}{9.75in}
+\usepackage{multirow}
+\usepackage{color}
+\usepackage{grffile}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{lscape}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{setspace}
+\lhead{} 
+\usepackage[english]{babel}
+\usepackage{csquotes}
+\usepackage{float}
+
+\usepackage[
+backend=biber,
+style=authoryear,
+sorting=nyt
+]{biblatex}
+%\usepackage{biblatex}
+
+\addbibresource{biblio.bib}
+
+ \usepackage{titlesec, blindtext, color}
+\definecolor{gray75}{gray}{0.75}
+\newcommand{\hsp}{\hspace{1pt}}
+\usepackage[a4paper,left=2cm,right=2cm,top=2cm,bottom=2.5cm,footskip=30pt]{geometry}
+\pagestyle{fancy} 
+\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{gray75}{|}\hsp}{0pt}{\LARGE\bfseries}
+\titlespacing{\chapter}{0pt}{0pt}{1cm}
+\fancyfoot[C]{\thepage}
+\usepackage[T1]{fontenc}
+\usepackage[toc,page]{appendix}
+
+\newcommand{\myparagraph}[1]{\paragraph{#1}\mbox{}\\}
+
+\graphicspath{Figures/} %this is the path to all your figures
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+\begin{document}
+
+
+\begin{titlepage}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\center 
+
+%logo
+\includegraphics[width=7cm]{Figures/ucllogo.jpg}\\[1cm]
+%headings
+\textsc{\LARGE University College London}\\[2cm] % Name of your university/college
+%title
+\HRule \\[1cm]
+{ \huge \bfseries Quantifying the importance of target organ interactions in Graft versus Host Disease}\\[0.4cm] 
+\HRule \\[1.5cm]
+
+\vspace{1cm}
+\textsc{\Large UCL Genetics Institute (UGI)}\\[0.5cm] % Major heading such as course name
+\textsc{\Large \&}\\[0.5cm]
+\textsc{\Large UCL Cancer Institute (Institute of Immunity and Transplantation) } \\[2.5cm] % Major heading such as course name
+
+\textsc{\large MPhil - PhD Upgrade Report}\\[1.5cm] % Minor heading such as course title
+ 
+%Author
+\begin{minipage}[t]{0.8\textwidth}
+%\begin{flushleft} \large
+\raggedright
+\emph{Author:}\\
+Claire \textsc{Winship} % Author's Name
+%\end{flushleft}
+\end{minipage}
+~
+\begin{minipage}[t]{0.8\textwidth}
+%\begin{flushright} \large
+\raggedleft
+\emph{Supervisors:} \\
+Dr  Vincent \textsc{Plagnol}\\ 
+Prof RonJon \textsc{Chakraverty}\\ 
+Dr Clare \textsc{Bennett}\\
+%\end{flushright}
+\end{minipage}\\[3cm]
+
+%date
+{\large \today}\\[3cm] 
+
+\vfill % Fill the rest of the page with whitespace
+
+\end{titlepage}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\phantomsection
+\begin{abstract}
+Graft-versus-host disease (GVHD) represents the most common post transplant complication of haematological stem cell transfers (HSCT) and most commonly affects the skin. T cells that are cotransplanted with the stem cells are the primary immunocompetent cells that cause the graft-versus-host injury. An ongoing debate is whether the key GVHD transcriptional changes in alloreactive T cells compared to na\"ive T are triggered in the target organs (e.g. skin) or in the secondary lymphoid organs. Answering this question first requires an understanding the behaviour of T cells in a resting non GVHD context. We took a systems biology approach that took advantage of existing publicly available T cells expression datasets (such as ImmGen, https://www.immgen.org/) to generate a “Module Map” detailing the transcriptional profile of T cells. To ensure the creation of a functional and biologically relevant map a rigorous analytical regime was employed throughout module generation and testing. External datasets were subject to analysis by various clustering methods including WGCNA, Hierarchical clustering, K-means, PAM, SOM and model-based clustering. We then compared these inferred modules with the gene expression signatures identified in our own murine models of GVHD (poly- and mono-clonal). The biological relevance of the modules produced in each case was subsequently scrutinised using gene/pathway annotation and the identification of driver genes. Persisting module sets were further investigated using differential expression type strategies. The combination of these techniques led to the identification of potential pathways involved in GVHD pathogenesis.
+\end{abstract}
+
+\tableofcontents %prints table of contents
+\listoffigures %prints list of figures
+\listoftables %prints list of tables
+
+%\input{Chapter1.tex} %input each chapter as a seperate .tex files
+\input{Chapters/Chapter1.tex}
+\input{Chapters/Chapter2.tex}
+\input{Chapters/Chapter3.tex}
+\input{Chapters/Chapter4.tex}
+\input{Chapters/Chapter5.tex}
+\input{Chapters/Chapter6.tex}
+
+\printbibliography %Prints the entire bibliography with the titel "Whole bibliography"
+% \nocite{*}
+%\begin{appendices}
+%These are your appendices.
+%\end{appendices}
+
+\end{document}

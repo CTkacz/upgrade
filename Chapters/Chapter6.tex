@@ -1,0 +1,30 @@
+
+\chapter{Conclusions} % Main chapter title
+
+\label{Chapter6} % For referencing the chapter elsewhere, use \ref{Chapter1} 
+
+%----------------------------------------------------------------------------------------
+
+\section {Summary of key findings}
+
+This report summarises the work undertaken within this PhD to date which is focused on the use of systems biology techniques to aid understanding of the mechanisms governing GVHD progression and in particular the influences of tissue specific T cell interactions on this pathology. 
+
+In the introductory Chapter (Chapter \ref{Chapter1}) we provide an overview of GVHD pathology including a summary of risk factors, the involvement of known SNPs and a discussion of the target tissue specific patterns displayed during the progression of this disease. 
+
+In Chapter \ref{Chapter2} we undertook a review of current knowledge of CD4$\textsuperscript{+}$ and CD8$\textsuperscript{+}$ T cells differentiation, subtype characteristics and details of the steps involved in their activation. The relevance of these mechanisms to GVHD research was also discussed in detail. 
+
+Chapter \ref{Chapter3} represents a summary of the methods utilised in this project which can be divided into two main categories. The first concern clustering of expression data with the aim of generating a "module map" of T cell expression profiles which could subsequently be used to identify enriched pathways in other datasets. The second group of methods relates to the quantification of associations between gene modules and particular traits/experimental groups. Here we detail our module based refined testing protocol which incorporates modular direction of effect data into the association test. We evaluate this test using simulated data.
+
+In Chapter \ref{Chapter4} we present the results of re-clustering of T cell data from the publicly available ImmGen resource. WGCNA, Hclust and \textit{k}-means were all applied to quantify how algorithms with a variety of clustering approaches handle large data sets. While WGCNA and Hclust produced many gene modules, \textit{k}-means clustering resulted in only a handful. We believe this only goes to highlight how useful correlation analysis can be when trying to group genes into biologically relevant clusters. This work also demonstrates the need for the establishment of comprehensive and user-friendly module annotation and qualitative assessment techniques.
+
+Chapter \ref{Chapter5} we apply our module based refined testing scheme to a GVHD module data set resulting from earlier work in the laboratory. Our refined testing analysis helped identify one particular module of genes which seems to be involved in orchestrating GVHD pathology in the epidermis. Standard association testing did not pick up on this candidate module, thus emphasising the power of including direction of effect data in association testing analyses.
+
+\section{Future work}
+
+Within the remainder of this PhD we hope to address the following matters: 
+
+\begin{enumerate}
+    \item Given the apparent success of combining WGCNA with differential expression analysis in order to highlight potentially enriched/important gene modules in a given experiment, we would like to investigate whether it is possible to incorporate these currently separate analytical approaches into a single pipeline.
+    \item As evidenced by the work undertaken in Chapter \ref{Chapter4}, we believe there is a lack of coherent and straightforward methods by which clustering solutions produced by different algorithms can be succinctly annotated and evaluated. We would like to address this by further researching the current annotation tools available and potentially investigating whether we can improve upon these in some way.
+    \item If possible, we would like to incorporate the analysis of human GVHD related datasets into our work. This would allow for the parallels between mouse and human GVHD to be investigated. Access to human data would also enable us to determine whether our refined testing protocol is applicable to data originating from non-murine subjects.
+\end{enumerate}
